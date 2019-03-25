@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Blogen</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark    p-0">
+        <div class="container ">
+            <a class="navbar-brand mr-2" href="index.html">Blogen</a>
+            <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+                aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav">
+                    <li class="nav-item active mx-2">
+                        <a class="nav-link " href="index.html">Dashboard <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link " href="Posts.html">Posts</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link " href="Catigories.html">Catigores</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="Posts.html">Users</a>
+                    </li>
+
+                </ul>
+
+                <ul class="nav justify-content-end ml-auto ">
+                    <li class="nav-item dropdown d-inline  ml-auto p-0">
+                        <a class="nav-link dropdown-toggle ml-auto text-light" href="#" data-toggle="dropdown">Welcom
+                            moh</a>
+                        <div class="dropdown-menu text-light">
+                            <a class="dropdown-item" href="Profile.html"> <i class="fa fa-user"></i> Profile</a>
+                            <a class="dropdown-item" href="Settings.html"><i class="fa fa-cog"></i>Settings</a>
+                        </div>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-light" href="Logout.html">Log Out</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!--dashboard header-->
+    <nav class="navbar bg-primary p-0 ">
+        <div class="container">
+            <h3 class="display-4 text-light"><i class="fa fa-cog"></i> Dashboard
+            </h3>
+        </div>
+    </nav>
+
+    <!--Actions-->
+    <div id="header " class="bg-light ml-auto p-4">
+        <div class="container ml-auto ">
+            <div class="row">
+                <div class="col-4">
+                    <button type="button" class="btn w-75 btn-primary" data-toggle="modal" data-target="#Add_Post">
+                        <i class="fa fa-plus"></i> Add Post
+                    </button></div>
+                <div class="col-4"><button type="button" class="btn w-75 btn-warning" data-toggle="modal" data-target="#Add_Category">
+                        <i class="fa fa-plus"></i> Add Category
+                    </button></div>
+                <div class="col-4"><button type="button" class="btn w-75 btn-success" data-toggle="modal" data-target="#Add_User">
+                        <i class="fa fa-plus"></i> Add User
+                    </button></div>
+            </div>
+        </div>
+    </div>
+    <!--popover-->
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal Add Post -->
+    <div class="modal fade" id="Add_Post" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary ">
+
+                    <h4 class="modal-title " id="modelTitleId">Add Post</h4><button type="button" class="close"
+                        data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="form-group mr-3 ml-3">
+                    <label for="">title</label>
+                    <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+
+
+
+
+                <div class="form-group mr-3 ml-3">
+                    <label for="category">Category</label>
+                    <select class="form-control">
+                        <option>Web DEvelopment</option>
+                        <option>Tech Gadqets</option>
+                        <option>Business</option>
+                    </select>
+                </div>
+                <div class="form-group mr-3 ml-3">
+                    <label for="file">image Upload</label>
+                    <input type="file" class="form-control-file" name="file" id="file" placeholder="chose file"
+                        aria-describedby="fileHelpId">
+                    <small id="fileHelpId" class="form-text text-muted">Max size 3m</small>
+                </div>
+
+                <div class="form-group mr-3 ml-3">
+                    <label for="">body</label>
+                    <textarea class="form-control" name="" id="" rows="3"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="posts">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <table class="table border  ml-0   tabel-striped ">
+                        <thead class="thead-inverse">
+                            <h3 class="display-4 ml-0 mt-4 mb-0 border">Latest Posts</h3>
+                            <tr class="bg-light">
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>Date Posted</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">1</td>
+                                <td>Post One</td>
+                                <td>Web Development</td>
+                                <td> July 12, 2017</td>
+                                <td><button class="btn "> <i class="fa fa-chevron-circle-right"></i> Details</button></td>
+                            </tr>
+                            <tr class="bg-light">
+                                <td scope="row">2</td>
+                                <td>Post One</td>
+                                <td>Web Development</td>
+                                <td> July 12, 2017</td>
+                                <td><button class="btn "> <i class="fa fa-chevron-circle-right"></i> Details</button></td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row">3</td>
+                                <td>Post One</td>
+                                <td>Web Development</td>
+                                <td> July 12, 2017</td>
+                                <td><button class="btn "> <i class="fa fa-chevron-circle-right"></i> Details</button></td>
+                            </tr>
+
+                            <tr class="bg-light">
+                                <td scope="row">4</td>
+                                <td>Post One</td>
+                                <td>Web Development</td>
+                                <td> July 12, 2017</td>
+                                <td><button class="btn "> <i class="fa fa-chevron-circle-right"></i> Details</button></td>
+                            </tr>
+
+                            <tr>
+                                <td scope="row">5</td>
+                                <td>Post One</td>
+                                <td>Web Development</td>
+                                <td> July 12, 2017</td>
+                                <td><button class="btn "> <i class="fa fa-chevron-circle-right"></i> Details</button></td>
+                            </tr>
+
+
+                            <tr class="m-4">
+                                <td scope="row">6</td>
+                                <td>Post One</td>
+                                <td>Web Development</td>
+                                <td> July 12, 2017</td>
+                                <td><button class="btn "> <i class="fa fa-chevron-circle-right"></i> Details</button></td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center bg-primary h-25 text-center bg-success mt-4 mb-2">
+                        <div class="card-body text-light pb-5">
+                            <h4 class="card-title ">Posts</h4>
+                            <h2 class="card-text text-light"><i class="fa fa-pencil "></i>6</h2>
+                            <a href="#" class="btn border text-light">veiws</a>
+                        </div>
+                    </div>
+
+                    <div class="card text-centerbg-primary h-25 text-center bg-warning mb-2">
+
+
+                        <div class="card-body pb-5 text-light ">
+                            <h4 class="card-title mt-auto">Catigores</h4>
+                            <h2 class="card-text "><i class="fa fa-folder-open    "></i></i>6</h2>
+                            <a href="#" class="btn text-light border">veiws</a>
+                        </div>
+                    </div>
+
+                    <div class="card text-centerbg-primary h-25  text-center bg-primary mt-0 mb-4 ">
+
+                        <div class="card-body pb-5 text-light">
+                            <h4 class="card-title">Users</h4>
+                            <h2 class="card-text "><i class="fa fa-user"></i>6</h2>
+                            <a href="#" class="btn  border text-light">veiws</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--fotter-->
+    <div class="jumbotron jumbotron-fluid mb-0 bg-dark text-light">
+
+        <h4 class=" text-center">Copyright©2018</h4>
+
+    </div>
+
+    <!--cards-->
+
+
+
+    <!--model Add Category-->
+    <div class="modal fade" id="Add_Category" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+
+                    <h4 class="modal-title" id="modelTitleId">Add Category</h4> <button type="button" class="close"
+                        data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="form-group mr-3 ml-3">
+                    <label for="">title</label>
+                    <input type="text" class="form-control">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="">notes</label>
+                    <textarea class="form-control" name="" id="" rows="3"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--model Add User-->
+    <div class="modal fade" id="Add_User" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success">
+
+                    <h4 class="modal-title" id="modelTitleId">Add Post</h4> <button type="button" class="close"
+                        data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="form-group  ml-3 mr-3">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" aria-describedby="helpId">
+                </div>
+                <div class="form-group mr-3 ml-3">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control">
+                </div>
+                <div class="form-group ml-3 mr-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control">
+                </div>
+
+                <div class="form-group ml-3 mr-3">
+                    <label for="password">Confirm Password</label>
+                    <input type="password" class="form-control">
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
